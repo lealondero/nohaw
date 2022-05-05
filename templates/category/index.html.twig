@@ -1,0 +1,35 @@
+{# category/index.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block title %}blog - index {% endblock %}
+
+{% block body %}
+<div class="container">
+    <h1 class="display-4 text-warning">Les catégories</h1>
+
+    <table class="table">
+        <thead class="thead-light">
+            <tr>
+                <th>Création</th>
+                <th>Catégorie</th>
+                <th>N</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for category in categories %}
+            <tr>
+                <td>
+                    <span class="badge badge-warning">#</span>
+                    <small>{{ category.createdAt|date("d/m/Y") }}</small>
+                </td>
+                <td>{{ category.description }}</td>
+                <td>
+                    {{ category.n }}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

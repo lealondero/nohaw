@@ -1,0 +1,37 @@
+{# templates/service/index.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Services
+{% endblock %}
+
+{% block body %}
+
+	<a href="{{ path('service_add')}}">
+		<button id="create">Créer un service</button>
+	</a>
+	<div class="wrapper">
+
+		{% for service in services %}
+			{% if service.expirationTime > 0 %}
+
+				<article>
+					<h2>{{ service.title }}</h2>
+					<span>
+						<i class="fas fa-user"></i>
+						{{ service.user }}</span>
+					<p>
+						{{ service.description|u.truncate( 100, '...' )  }}
+					</p>
+					<a href="#">
+						<button>Bénéficier du service</button>
+					</a>
+					<small>Expire dans
+						{{ service.expirationTime }}
+						jours</small>
+				</article>
+			{% endif %}
+		{% endfor %}
+
+	</div>
+{% endblock %}

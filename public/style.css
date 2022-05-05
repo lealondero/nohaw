@@ -1,0 +1,410 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*En-tête*/
+
+#logo {
+  width: 14%;
+}
+
+a {
+  text-decoration: none;
+  color: #707070;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+body {
+  height: 100vh;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+header {
+  width: 100%;
+  height: 20%;
+  font-family: "Comfortaa", cursive;
+}
+
+header > nav {
+  height: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 28px;
+  font-family: "Comfortaa", cursive;
+}
+
+header > .menu {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  text-transform: capitalize;
+  font-family: "Comfortaa", cursive;
+}
+
+header > #menu > a {
+  color: #707070;
+}
+
+header > .menu > a {
+  color: white;
+  height: 100%;
+  transition: 200ms;
+  width: calc(100% / 6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header > .menu > a:first-child {
+  width: 100px;
+}
+
+header > .menu > a:hover {
+  background-color: #378d8d;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+header > .menu > #user {
+  width: 100px;
+}
+header > .menu > #user:hover {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+header > .menu {
+  background: #50aaaa;
+}
+
+.accueil #menu input {
+  background: none;
+  padding: 10px;
+  font: 14pt arial;
+  color: #707070;
+  border: solid 1px #707070;
+  outline: none;
+  width: 300px;
+  margin-top: 6px;
+  margin-bottom: 16px;
+}
+
+/*Mise en page du service*/
+
+.wrapper {
+  max-width: 970px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  grid-auto-rows: minmax(100px, auto);
+}
+
+.wrapper article {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 20px;
+  box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.2);
+  padding: 15px;
+}
+
+.wrapper button {
+  width: 100px;
+  background-color: white;
+  color: #378d8d;
+  border-radius: 0px;
+  border: solid 1px #378d8d;
+  padding: 5px;
+  transition: 0.5s;
+}
+
+.wrapper button:hover {
+  width: 100px;
+  background-color: #378d8d;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.wrapper h2 {
+  color: #378d8d;
+  margin-bottom: 1rem;
+}
+
+.wrapper p {
+  color: #707070;
+  margin-bottom: 1em;
+  min-height: 80px;
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+}
+
+.wrapper span {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  margin: 10px;
+}
+
+.wrapper .fa-user {
+  color: #378d8d;
+  padding-right: 10px;
+  font-size: 18px;
+}
+
+/*icone user*/
+#user .fa-user {
+  color: white;
+  font-size: 30px;
+}
+
+small {
+  padding: 5px;
+}
+
+/*formulaires*/
+
+.form {
+  margin: 0;
+  padding: 0;
+  background-color: #50aaaa;
+  color: white;
+  text-align: center;
+  padding: 3%;
+}
+
+.form form {
+  padding: 20px;
+  margin: auto;
+  text-align: left;
+  width: 500px;
+  background: white;
+  color: #707070;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 25px;
+}
+
+.form #descrip {
+  height: 300px;
+}
+
+.form input {
+  background: none;
+  padding: 10px;
+  font: 12pt arial;
+  color: black;
+  border: solid 1px #707070;
+  outline: none;
+  width: 400px;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.form textarea {
+  background: none;
+  padding: 10px;
+  font: 12pt arial;
+  color: black;
+  border: solid 1px #707070;
+  outline: none;
+  width: 400px;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  display: block;
+  max-width: 400px;
+  min-width: 400px;
+}
+
+.form select {
+  background: none;
+  padding: 10px;
+  font: 12pt arial;
+  color: black;
+  border: solid 1px #707070;
+  outline: none;
+  width: 400px;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  display: block;
+  max-width: 400px;
+  min-width: 400px;
+}
+
+.form input[type="submit"] {
+  background-color: #50aaaa;
+  color: white;
+  border-color: #50aaaa;
+  border-radius: 10px;
+  width: 30%;
+  cursor: pointer;
+}
+
+#message {
+  text-align: left;
+  padding: 10px;
+  color: #b70100;
+  border: dashed 1px #707070;
+}
+
+.form a {
+  padding: 14px;
+  background-color: #50aaaa;
+  text-decoration: none;
+  color: #fff;
+  margin-left: 60px;
+  border-radius: 6px;
+  display: flex;
+  height: 20px;
+}
+
+.form a:hover {
+  background-color: #50aaaa;
+}
+
+.form h1 {
+  font-size: 36pt;
+  color: #707070;
+  font-weight: normal;
+}
+
+.form h1 span {
+  font: inherit;
+  color: white;
+}
+
+.form div:first-child {
+  display: flex;
+  align-items: center;
+}
+
+/*formulaire recherche*/
+.form2 input {
+  background: none;
+  padding: 10px;
+  font: 12pt arial;
+  color: black;
+  border: solid 1px #707070;
+  outline: none;
+  width: 400px;
+  margin-top: 6px;
+  margin-bottom: 16px;
+}
+
+.form2 {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.form2 button {
+  background-color: #fff;
+  color: #707070;
+  border: none;
+  font-size: 25px;
+  padding: 5px;
+}
+
+/* Bouton afficher/masquer */
+
+.form form > div:nth-child(3) {
+  position: relative;
+}
+
+.form div:nth-child(5) {
+  position: relative;
+}
+.form div:nth-child(6) {
+  position: relative;
+}
+
+.pass + .showHidePwd {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  width: 25px;
+  height: 25px;
+  text-indent: -9999px;
+  background: #aaa;
+  border-radius: 50%;
+  cursor: pointer;
+  transform: translateY(-30%);
+}
+.pass + .showHidePwd2 {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  width: 25px;
+  height: 25px;
+  text-indent: -9999px;
+  background: #aaa;
+  border-radius: 50%;
+  cursor: pointer;
+  transform: translateY(-30%);
+}
+.pass + .showHidePwd3 {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  width: 25px;
+  height: 25px;
+  text-indent: -9999px;
+  background: #aaa;
+  border-radius: 50%;
+  cursor: pointer;
+  transform: translateY(-30%);
+}
+
+.pass + .showHidePwd:before,
+.pass + .showHidePwd2:before,
+.pass + .showHidePwd3:before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  z-index: 1;
+  width: 17px;
+  height: 17px;
+  background: #e3e3e3;
+  border-radius: 50%;
+}
+
+.pass[type="text"] + .showHidePwd:after,
+.pass[type="text"] + .showHidePwd2:after,
+.pass[type="text"] + .showHidePwd3:after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  z-index: 2;
+  width: 13px;
+  height: 13px;
+  background: #aaa;
+  border-radius: 50%;
+}
+
+/*Bouton de création de service*/
+
+#create {
+  background-color: #378d8d;
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  font-size: 20px;
+  margin: 0 auto;
+  cursor: pointer;
+  border: none;
+  margin-top: 50px;
+}

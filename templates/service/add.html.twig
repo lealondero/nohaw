@@ -1,0 +1,40 @@
+{# service/add.html.twig #}
+
+<!DOCYTPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="{{asset('/style.css')}}">
+	</head>
+	<body class="form">
+
+		<form action="{{ path('service_add')}}" method="post">
+			<div>
+				<h1>Créez votre service</h1>
+			</div>
+			<div>
+				<label>Nom du service</label>
+				<input type="text" name="title" size="40"/>
+			</div>
+			<div>
+				<label>Description</label>
+				<textarea name="description"></textarea>
+			</div>
+			<div>
+				<label>Date d'expiration :</label>
+				<input name="expireAt" type="date">
+			</div>
+			<div>
+				<label>Catégorie :</label>
+				<select name="category">
+					{% for category in categories %}
+						<option value="{{ category.id }}">{{ category }}</option>
+					{% endfor %}
+				</select>
+			</div>
+			<input
+			type="submit" name="valider" value="Valider"/>
+		{# <a href="{{ path('home')}}" class="btn btn-link text-dark">annuler</a> #}
+		</form>
+
+	</body>
+</html>

@@ -1,0 +1,28 @@
+{# templates/security/login.html.twig #}
+<!DOCYTPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="./../style.css"/>
+	</head>
+	<body class="form">
+
+		<form class="form-horizontal" role="form" action="{{ path('app_login') }}" method="post">
+			<div>
+				<h1>Authentification</h1>
+				<a href="{{ path('registration') }}">S'inscrire</a>
+			</div>
+			<div>
+				<label>Email</label>
+				<input id="inputEmail" type="email" class="form-control" name="email" value="{{ last_username }}" required autofocus/>
+			</div>
+			<div>
+				<label>Mot de passe</label>
+				<input id="inputPassword" type="password" class="form-control" name="password" required/>
+			</div>
+			<input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}"/>
+			<input type="submit" name="valider" value="S'authentifier"/>
+		</form>
+
+
+	</body>
+</html>
